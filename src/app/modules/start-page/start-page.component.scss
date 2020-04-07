@@ -1,0 +1,27 @@
+@import '../../styles/positioning.scss';
+
+.main-start-page-container {
+    @include vert-hor-centered-box;
+    height: 100vh;
+    background: lightsteelblue;
+}
+
+.inner-start-page-container {
+    height: 25%;
+    width: 40%;
+}
+
+.displayName-FormField {
+    width: 70%;
+}
+
+.start-button {
+    @include button-positioned-to-end;
+}
+
+@media screen and (max-width: 676px) {
+    .inner-start-page-container {
+        height: initial;
+        width: initial;
+    }
+}

@@ -1,0 +1,10 @@
+@mixin vert-hor-centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-positioned-to-end {
+    display: flex;
+    justify-content: flex-end;
+}
