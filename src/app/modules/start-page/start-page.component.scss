@@ -3,6 +3,7 @@
 .main-start-page-container {
     @include vert-hor-centered-box;
     height: 100vh;
+    background: lightsteelblue;
 }
 
 .inner-start-page-container {
