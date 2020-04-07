@@ -1,0 +1,19 @@
+<div class = "main-start-page-container">
+<mat-card class = "inner-start-page-container">
+    <mat-card-content>
+        <h3>Welcome to the Ultimate Quiz App!</h3>
+        <p>Please enter your display name.</p>
+
+        <form [formGroup] = "displayNameInput">
+            <mat-form-field class = "displayName-Formfield">
+                <mat-label>Display name</mat-label>
+                <input matInput formControlName = "displayName">
+            </mat-form-field>
+
+            <div class = "start-button">
+                <button (click) = "onStartGame()" [disabled] = "!isGameStartable" mat-button color="primary">START GAME</button>
+            </div>
+        </form>
+        </mat-card-content>
+</mat-card>
+</div>
