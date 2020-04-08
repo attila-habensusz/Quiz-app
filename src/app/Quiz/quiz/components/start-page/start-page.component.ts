@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { StateService } from 'src/app/services/state.service';
 
@@ -9,9 +9,10 @@ import { StateService } from 'src/app/services/state.service';
 })
 export class StartPageComponent implements OnInit {
   displayNameInput: FormGroup;
+  @Output() emitGameStart = new EventEmitter<any>();
 
   constructor(private formBuilder: FormBuilder,
-    private stateService: StateService) { }
+              private stateService: StateService) { }
 
   ngOnInit(): void {
     this.displayNameInput = this.formBuilder.group({
@@ -28,6 +29,7 @@ export class StartPageComponent implements OnInit {
   onStartGame() {
     const displayName = this.displayNameInput.value.displayName;
     this.stateService.setDisplayName(displayName);
+    this.emitGameStart.emit(true);
   }
 
 }

@@ -1,0 +1,4 @@
+<app-start-page *ngIf = "!isGameStarted" (emitGameStart) = "onStartGame()"></app-start-page>
+
+<app-category-selector *ngIf = "isGameStarted"></app-category-selector>
+

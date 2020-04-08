@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StartPageComponent } from './modules/start-page/start-page.component';
-import { StartPageModule } from './modules/start-page/start-page.module';
+import { StartPageModule } from './Quiz/quiz/components/start-page/start-page.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CategorySelectorModule } from './Quiz/quiz/components/category-selector/category-selector.module';
+import { QuizModule } from './Quiz/quiz/quiz.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StartPageModule,
+    QuizModule,
     BrowserAnimationsModule
   ],
   providers: [],
